@@ -24,7 +24,8 @@ for n in range(1, 101):
     
 #%%
     
-# ROMAN NUMERALS       
+# ROMAN NUMERALS 
+# convert arabic integers to roman numerals
 # assuming numbers won't be that much greater than 1000
 
 dictionary = {1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L',
@@ -34,9 +35,11 @@ def roman_numeral(n):
     ans = ""
     current = n
     while current != 0:
+        # find biggest divisor from dictionary
         for i in dictionary:
             if i <= current:
                 divis = i
+        # update answer and current
         num_times = current // divis
         ans += (dictionary[divis] * num_times)
         current = current % divis
