@@ -87,18 +87,19 @@ def game():
             print("invalid argument types")
             continue
 
+        # makes sure that the character is an integer between 0 and 2
         x = ord(coordinates[0]) - ord('0') - 1
         y = ord(coordinates[1]) - ord('0') - 1
-            
         if (x < 0 or x > 2 or y < 0 or y > 2):
             print("invalid coordinates")
             continue
         
+        # makes sure that the location is empty
         if (board[x][y] != " "):
             print("location is already taken")
             continue
             
-        # valid coordinates and may play
+        # valid coordinates and may continue
         if (player == 0):
             board[x][y] = 'X'
         else:

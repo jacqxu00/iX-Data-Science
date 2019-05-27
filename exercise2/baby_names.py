@@ -64,7 +64,8 @@ def main(args):
                 if line[2] == name:
                     girls += 1
                     continue
-            
+                
+    # prints out how many years it is popular for girls and boys
     print("boys couunt: ", boys)
     print("girls count: ", girls)
     
