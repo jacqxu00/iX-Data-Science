@@ -4,3 +4,8 @@
 1. FIZZBUZZ: change multiples of 3 and 5
 2. ROMAN NUMERALS: convert integer to roman numeral
 3. ROT13: rotate alphabet by number of characters
+
+#### Exercise 2
+1. BABYNAMES: finds name in multiple files
+2. TICTACTOE: allows two players to play tic tac toe
+

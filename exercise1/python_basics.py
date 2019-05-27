@@ -3,7 +3,7 @@
 Jacqueline Xu
 iXperience Data Science
 26 May 2019
-Introduction to Python Assignment
+Exercise 1: Python Basics
 """
 
 #%%
