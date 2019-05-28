@@ -67,9 +67,9 @@ def player_at(letter):
 # checks if there is a winner
 def winner(board):
     # check horizontally
-    for i in board:
-        if i[0] == i[1] and i[1] == i[2]:
-            return player_at(i[0])
+    for i in range(len(board)):
+        if board[i][0] == board[i][1] and board[i][1] == board[i][2]:
+            return player_at(board[i][0])
     # check vertically
     for i in range(len(board[0])):
         if board[0][i] == board[1][i] and board[1][i] == board[2][i]:
@@ -77,7 +77,6 @@ def winner(board):
     # check diagonally
     if (board[0][0] == board[1][1] and board[1][1] == board[2][2]) or \
         (board[2][0] == board[1][1] and board[1][1] == board[0][2]):
-        return player_at(board[1][1])
         return player_at(board[1][1])
     # no winner
     return 0
@@ -135,13 +134,17 @@ def game():
             board[x][y] = 'X'
         else:
             board[x][y] = 'O'
+
+        # switch to other player
         print_board(board)
-        player = ~ player # switch to other player
+        player = ~ player
     
-    print("Game Over!")
+    # game is over
     win = winner(board)
     if (win != 0):
         print("Player {} wins!".format(win))
+    else:
+        print("Game Tied!")
 
 if __name__ == "__main__":
     game()

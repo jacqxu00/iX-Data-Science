@@ -5,7 +5,10 @@
 2. ROMAN NUMERALS: convert integer to roman numeral
 3. ROT13: rotate alphabet by number of characters
 
-#### Exercise 2
-1. BABYNAMES: finds name in multiple files
-2. TICTACTOE: allows two players to play tic tac toe
+#### Exercise 2: Python Advanced
+1. BABY NAMES: finds name in multiple files
+2. TIC-TAC-TOE: allows two players to play tic tac toe
 
+#### Exercise 3: Pandas
+1. CRIME DATA: analyzes crime data in data folder
+2. TITANIC: analyzes passengers aboard the Titanic
