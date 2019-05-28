@@ -40,38 +40,69 @@ player 1 and 2
 # prints out the board by printing '-' for all empty spaces
 def print_board(board):
     print("board: ")
-    for i in board:
-        for j in i:
-            if (j == " "):
-                print("-", end = " ")
-            else:
-                print(j, end = " ")
+    print("  1 2 3")
+    for i in range(len(board)):
+        print(i+1, end = " ")
+        for j in board[i]:
+            print(j, end = " ")
         print()
 
 # checks whether or not the board is full
 def not_full(board):
     for i in board:
         for j in i:
-            if (j == " "):
+            if (j == "-"):
                 return True
     return False
+
+# returns the player number at the location
+def player_at(letter):
+    if letter == 'X':
+        return 1
+    elif letter == 'O':
+        return 2
+    else:
+        return 0
     
+# checks if there is a winner
+def winner(board):
+    # check horizontally
+    for i in board:
+        if i[0] == i[1] and i[1] == i[2]:
+            return player_at(i[0])
+    # check vertically
+    for i in range(len(board[0])):
+        if board[0][i] == board[1][i] and board[1][i] == board[2][i]:
+            return player_at(board[0][i])
+    # check diagonally
+    if (board[0][0] == board[1][1] and board[1][1] == board[2][2]) or \
+        (board[2][0] == board[1][1] and board[1][1] == board[0][2]):
+        return player_at(board[1][1])
+        return player_at(board[1][1])
+    # no winner
+    return 0
+
+# prints instructions
+def print_instructions():
+    print("""
+How To Play:
+    1. Take turns as the instructions say
+    2. Enter coordinate in the following manner: "a b" where a is
+    which row (top row being 1) and b is which column (left
+    column being 1))
+          """)
     
 def game():
     player = 0 
     board = [
-        [" ", " ", " "],
-        [" ", " ", " "],
-        [" ", " ", " "]
+        ["-", "-", "-"],
+        ["-", "-", "-"],
+        ["-", "-", "-"]
         ]
-    print("""
-          How To Play:
-              1. Take turns as the instructions say
-              2. Enter coordinate in the following manner: "a b" where a is
-                 which row (top row being 1) and b is which column (left
-                 column being 1))
-          """)
-    while (not_full(board)):
+    print_instructions()
+    print_board(board)
+    
+    while (not_full(board) and winner(board) == 0):
         if (player == 0):
             command = input('Player 1 (X) Command: ')
         else:
@@ -95,7 +126,7 @@ def game():
             continue
         
         # makes sure that the location is empty
-        if (board[x][y] != " "):
+        if (board[x][y] != "-"):
             print("location is already taken")
             continue
             
@@ -107,8 +138,10 @@ def game():
         print_board(board)
         player = ~ player # switch to other player
     
-    print("Game Complete!")
-        
+    print("Game Over!")
+    win = winner(board)
+    if (win != 0):
+        print("Player {} wins!".format(win))
 
 if __name__ == "__main__":
     game()
