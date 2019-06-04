@@ -19,3 +19,10 @@
 #### Exercise 5: API and SCAPY
 1. SALARIES (API): uses the teleport API to find the best country in Europe to be an architect
 2. BOOKS (SCAPY): gathers information from bookscape (unfinished)
+
+#### Exercise 6: Data Visualization
+1. COUNTRY POPULATION: displays country populations on a world map
+
+#### Exercise 7: Statistics
+1. NEIGHBORHOOD LISTINGS: using AirBNB database, provides information about the available listings in a given neighborhood
+2. APARTMENT SEARCH: using AirBNB database, helps users find their desired apartment given filters
