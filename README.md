@@ -26,3 +26,15 @@
 #### Exercise 7: Statistics
 1. NEIGHBORHOOD LISTINGS: using AirBNB database, provides information about the available listings in a given neighborhood
 2. APARTMENT SEARCH: using AirBNB database, helps users find their desired apartment given filters
+
+#### Exercise 8: Data Analysis Part 1
+1. INITIAL DATA PROCESSING
+2. DATA QUALITY ASSURANCE
+3. VARIABLE GROUPING
+
+#### Exercise 9: Data Analysis Part 2
+1. VARIABLE DISTRIBUTION
+2. COMPARISONS
+3. DATA PROCESSING
+
+#### Exercise 10: Linear Regressions
